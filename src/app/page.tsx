@@ -1,13 +1,5 @@
 'use client'
 import { useState } from 'react';
-import { 
-  ChartBarIcon, 
-  ArrowTrendingUpIcon, 
-  ArrowTrendingDownIcon,
-  CalendarIcon,
-  CurrencyDollarIcon,
-  ChartPieIcon
-} from '@heroicons/react/24/outline';
 
 interface TradeData {
   data: string;
@@ -879,7 +871,7 @@ export default function Home() {
           <div className="bg-gray-800/50 backdrop-blur-xl rounded-xl p-6 border border-gray-700/30">
             <div className="flex flex-col">
               <div className="flex items-center gap-2 mb-1">
-                <ChartPieIcon className="h-5 w-5 text-indigo-400" />
+                <span className="text-indigo-400">📊</span>
                 <span className="text-sm text-gray-400">Win Rate</span>
               </div>
               <div className="flex items-baseline gap-2">
@@ -896,7 +888,7 @@ export default function Home() {
           <div className="bg-gray-800/50 backdrop-blur-xl rounded-xl p-6 border border-gray-700/30">
             <div className="flex flex-col">
               <div className="flex items-center gap-2 mb-1">
-                <CurrencyDollarIcon className="h-5 w-5 text-emerald-400" />
+                <span className="text-emerald-400">💰</span>
                 <span className="text-sm text-gray-400">Resultado Total</span>
               </div>
               <div className="flex items-baseline gap-2">
@@ -910,7 +902,7 @@ export default function Home() {
           <div className="bg-gray-800/50 backdrop-blur-xl rounded-xl p-6 border border-gray-700/30">
             <div className="flex flex-col">
               <div className="flex items-center gap-2 mb-1">
-                <ArrowTrendingUpIcon className="h-5 w-5 text-green-400" />
+                <span className="text-green-400">📈</span>
                 <span className="text-sm text-gray-400">Total de Sinais</span>
               </div>
               <div className="flex items-baseline gap-2">
@@ -940,20 +932,20 @@ export default function Home() {
                     <tr>
                       <th scope="col" className="py-3.5 pl-4 pr-3 text-left text-sm font-semibold text-gray-200 sm:pl-0">
                         <div className="flex items-center gap-2">
-                          <CalendarIcon className="h-4 w-4" />
+                          <span>📅</span>
                           Data
                         </div>
                       </th>
                       <th scope="col" className="px-3 py-3.5 text-left text-sm font-semibold text-gray-200">
                         <div className="flex items-center gap-2">
-                          <CurrencyDollarIcon className="h-4 w-4" />
+                          <span>💱</span>
                           Ativo
                         </div>
                       </th>
                       <th scope="col" className="px-3 py-3.5 text-left text-sm font-semibold text-gray-200">Direção</th>
                       <th scope="col" className="px-3 py-3.5 text-left text-sm font-semibold text-gray-200">
                         <div className="flex items-center gap-2">
-                          <ChartBarIcon className="h-4 w-4" />
+                          <span>📊</span>
                           Resultado
                         </div>
                       </th>
