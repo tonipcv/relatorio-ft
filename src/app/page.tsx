@@ -1,5 +1,14 @@
 'use client'
 import { useState } from 'react';
+import { 
+  BarChart3, 
+  PieChart,
+  Search,
+  Calendar,
+  TrendingUp,
+  Filter
+} from 'lucide-react';
+import Image from 'next/image';
 
 interface TradeData {
   data: string;
@@ -816,9 +825,16 @@ export default function Home() {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-8">
         <div className="sm:flex sm:items-center sm:justify-between">
           <div>
-            <h1 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">
-              Transparência Futuros Tech 
-            </h1>
+            <div className="flex items-center gap-4">
+              <Image
+                src="/logo.png"
+                alt="Logo Futuros Tech"
+                width={300}
+                height={75}
+                className="object-contain w-auto h-12"
+                priority
+              />
+            </div>
             <p className="mt-2 text-sm text-gray-400">
               Análise detalhada de {tradeData.length} operações
             </p>
@@ -871,7 +887,7 @@ export default function Home() {
           <div className="bg-gray-800/50 backdrop-blur-xl rounded-xl p-6 border border-gray-700/30">
             <div className="flex flex-col">
               <div className="flex items-center gap-2 mb-1">
-                <span className="text-indigo-400">📊</span>
+                <PieChart className="h-4 w-4 text-indigo-400" strokeWidth={1.5} />
                 <span className="text-sm text-gray-400">Win Rate</span>
               </div>
               <div className="flex items-baseline gap-2">
@@ -888,7 +904,7 @@ export default function Home() {
           <div className="bg-gray-800/50 backdrop-blur-xl rounded-xl p-6 border border-gray-700/30">
             <div className="flex flex-col">
               <div className="flex items-center gap-2 mb-1">
-                <span className="text-emerald-400">💰</span>
+                <TrendingUp className="h-4 w-4 text-emerald-400" strokeWidth={1.5} />
                 <span className="text-sm text-gray-400">Resultado Total</span>
               </div>
               <div className="flex items-baseline gap-2">
@@ -902,7 +918,7 @@ export default function Home() {
           <div className="bg-gray-800/50 backdrop-blur-xl rounded-xl p-6 border border-gray-700/30">
             <div className="flex flex-col">
               <div className="flex items-center gap-2 mb-1">
-                <span className="text-green-400">📈</span>
+                <BarChart3 className="h-4 w-4 text-green-400" strokeWidth={1.5} />
                 <span className="text-sm text-gray-400">Total de Sinais</span>
               </div>
               <div className="flex items-baseline gap-2">
@@ -932,20 +948,25 @@ export default function Home() {
                     <tr>
                       <th scope="col" className="py-3.5 pl-4 pr-3 text-left text-sm font-semibold text-gray-200 sm:pl-0">
                         <div className="flex items-center gap-2">
-                          <span>📅</span>
+                          <Calendar className="h-4 w-4" strokeWidth={1.5} />
                           Data
                         </div>
                       </th>
                       <th scope="col" className="px-3 py-3.5 text-left text-sm font-semibold text-gray-200">
                         <div className="flex items-center gap-2">
-                          <span>💱</span>
+                          <Search className="h-4 w-4" strokeWidth={1.5} />
                           Ativo
                         </div>
                       </th>
-                      <th scope="col" className="px-3 py-3.5 text-left text-sm font-semibold text-gray-200">Direção</th>
                       <th scope="col" className="px-3 py-3.5 text-left text-sm font-semibold text-gray-200">
                         <div className="flex items-center gap-2">
-                          <span>📊</span>
+                          <Filter className="h-4 w-4" strokeWidth={1.5} />
+                          Direção
+                        </div>
+                      </th>
+                      <th scope="col" className="px-3 py-3.5 text-left text-sm font-semibold text-gray-200">
+                        <div className="flex items-center gap-2">
+                          <BarChart3 className="h-4 w-4" strokeWidth={1.5} />
                           Resultado
                         </div>
                       </th>
