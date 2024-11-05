@@ -14,6 +14,6 @@ model trade {
   direcao    String?   @db.VarChar(10)
   percentual Decimal?  @db.Decimal
   alvo       String?   @db.VarChar(50)
-  updatedAt  DateTime? @default(now()) @db.Timestamp(6)
-  createdAt  DateTime? @default(now()) @db.Timestamp(6)
+  createdat  DateTime? @default(now()) @db.Timestamp(6)
+  updatedat  DateTime? @default(now()) @db.Timestamp(6)
 }
